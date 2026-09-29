@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+.pytest_cache/
+.venv/
+venv/
+
+# Frontend
+node_modules/
+dist/
+
+# Local data and model weights
+.env
+data/
+models/cache/
+*.onnx
+*.gguf
+*.qnn
+*.bin
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

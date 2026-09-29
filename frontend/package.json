@@ -1,0 +1,23 @@
+{
+  "name": "snapinterview-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/copy-mediapipe-assets.mjs",
+    "predev": "node scripts/copy-mediapipe-assets.mjs",
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "node scripts/copy-mediapipe-assets.mjs",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "~5.8.3",
+    "vite": "latest"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "speech.whisper-tiny-local",
+      "task": "speech_recognition",
+      "display_name": "Whisper Tiny (optional local CPU model)",
+      "source": "https://huggingface.co/Systran/faster-whisper-tiny",
+      "formats": ["CTranslate2"],
+      "runtimes": ["faster-whisper"],
+      "targets": ["cpu"],
+      "status": "optional-download-not-bundled",
+      "checksum": null,
+      "notes": "Local CPU ASR adapter is implemented. Model weights are obtained by the one-time setup script; no weights are in the repository archive. Snapdragon execution is not implemented or validated."
+    },
+    {
+      "id": "vision.mediapipe-face-landmarker",
+      "task": "visual_communication",
+      "display_name": "MediaPipe Face Landmarker float16",
+      "source": "https://developers.google.com/mediapipe/solutions/vision/face_landmarker",
+      "formats": ["MediaPipe task bundle"],
+      "runtimes": ["@mediapipe/tasks-vision WebAssembly"],
+      "targets": ["browser CPU/WebAssembly"],
+      "status": "bundled-local",
+      "checksum": null,
+      "notes": "Outputs landmarks used for rough face-in-frame, centering and frame-to-frame head-position signals only; no psychological inference. Camera frames remain in-browser."
+    },
+    {
+      "id": "llm.local-candidate",
+      "task": "answer_evaluation",
+      "display_name": "Local structured-output LLM (not installed)",
+      "source": null,
+      "formats": [],
+      "runtimes": [],
+      "targets": ["cpu", "snapdragon-candidate"],
+      "status": "not-selected",
+      "checksum": null,
+      "notes": "Current evaluator is a deterministic local rubric, not a language model."
+    }
+  ]
+}
